@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {createGlobalStyle} from "styled-components";
+import Header from "./components/Header";
+
+const GlobalStyle = createGlobalStyle`
+    @font-face{
+      font-family: 'Oleo Script';
+      font-style: normal;
+      font-weight: 700;
+      src: url('../raxkHieDvtMOe0iICsUccCDmnlrR0TukKQ.woff2') format('woff2');
+      }
+    // body {
+    //   background-color: black;
+    //   }
+`;
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <GlobalStyle/>
+            <Header/>
+        </>
+    );
 }
 
 export default App;
