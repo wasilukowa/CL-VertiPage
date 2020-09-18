@@ -2,35 +2,23 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header";
 
+import { ThemeProvider } from "styled-components";
 import GlobalFonts from "./fonts/fonts";
 
-// const GlobalStyle = createGlobalStyle`
-//     @font-face{
-//       font-family: 'oleo_script';
-//       font-style: regular;
-//       font-weight: 700;
-//       src: url('/static/oleo-script-v9-latin-regular.woff2') format('woff2');
-//     }
-
-//     @font-face {
-//       font-family: 'radnika_next';
-//       src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
-//       font-weight: normal;
-//       font-style: normal;
-//     }
-
-//     body {
-//       background-color: #ffffff;
-//     }
-// `;
+const theme = {
+  black: "#444",
+  grey: "#696969",
+  lightGrey: "#E6E6E6",
+  pink: "#FF4486",
+}
 
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalFonts />
       <Header />
-    </>
+    </ThemeProvider>
   );
 }
 
