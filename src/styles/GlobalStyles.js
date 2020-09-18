@@ -14,5 +14,8 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.5rem;
       line-height: 2;
       font-family: 'Arial';
+      background-color: ${props => props.theme.lightGrey}
     }
 `;
+
+export default GlobalStyle;

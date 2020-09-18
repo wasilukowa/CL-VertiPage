@@ -4,6 +4,7 @@ import Header from "./components/Header";
 
 import { ThemeProvider } from "styled-components";
 import GlobalFonts from "./fonts/fonts";
+import GlobalStyle from "./styles/GlobalStyles"
 
 const theme = {
   black: "#444",
@@ -16,6 +17,7 @@ const theme = {
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <GlobalFonts />
       <Header />
     </ThemeProvider>
