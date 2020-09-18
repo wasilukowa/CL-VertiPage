@@ -7,7 +7,7 @@ const Logo = styled.h1`
     padding: 10px;
     border-radius: 5px;
     color: white;
-    font-family: 'Oleo Script', sans-serif;
+    font-family: 'Oleo Script', serif;
 `;
 
 const Header = props => {
@@ -19,7 +19,7 @@ const Header = props => {
             {/*<Navigation/>*/}
 
         </>
-)
+    )
 }
 
 export default Header;

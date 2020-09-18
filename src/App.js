@@ -1,28 +1,37 @@
 import React from 'react';
 import './App.css';
-import {createGlobalStyle} from "styled-components";
 import Header from "./components/Header";
 
-const GlobalStyle = createGlobalStyle`
-    @font-face{
-      font-family: 'Oleo Script';
-      font-style: normal;
-      font-weight: 700;
-      src: url('../raxkHieDvtMOe0iICsUccCDmnlrR0TukKQ.woff2') format('woff2');
-      }
-    // body {
-    //   background-color: black;
-    //   }
-`;
+import GlobalFonts from "./fonts/fonts";
+
+// const GlobalStyle = createGlobalStyle`
+//     @font-face{
+//       font-family: 'oleo_script';
+//       font-style: regular;
+//       font-weight: 700;
+//       src: url('/static/oleo-script-v9-latin-regular.woff2') format('woff2');
+//     }
+
+//     @font-face {
+//       font-family: 'radnika_next';
+//       src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
+//       font-weight: normal;
+//       font-style: normal;
+//     }
+
+//     body {
+//       background-color: #ffffff;
+//     }
+// `;
 
 
 function App() {
-    return (
-        <>
-            <GlobalStyle/>
-            <Header/>
-        </>
-    );
+  return (
+    <>
+      <GlobalFonts />
+      <Header />
+    </>
+  );
 }
 
 export default App;
