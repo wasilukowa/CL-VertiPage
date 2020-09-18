@@ -4,10 +4,7 @@ import Logo from "./LogoVerti";
 
 const Header = props => {
     return (
-        <>
-            <Logo />
-            {/*<Navigation/>*/}
-        </>
+        <Logo />
     )
 }
 

@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 const LogoStyles = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 1em;
     h1 {
         background-color: ${props => props.theme.pink};
-        /* display: inline-block; */
         padding: 0.2em 0.275em;
         border-radius: 5px;
         color: white;
@@ -22,10 +21,23 @@ const LogoStyles = styled.div`
         font-size: 0.9em;
         color: ${props => props.theme.grey};
         font-family: 'Open Sans Bold';
-        margin-left: 1em;
+        text-align: center;
+        margin-left: 0;
     }
-    @media (max-width: 736px){
-        flex-direction: column;
+    @media (min-width: 736px){
+        h1 {
+            font-size: 3.2em;
+        }
+    }
+
+    @media (min-width: 980px){
+        flex-direction: row;
+        h1 {
+            font-size: 3.7em;
+        }
+        h2 {
+            margin-left: 1em;
+        }
     }
 `;
 
