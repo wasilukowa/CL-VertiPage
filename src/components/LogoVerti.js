@@ -26,14 +26,13 @@ const LogoStyles = styled.div`
     }
     @media (min-width: 736px){
         h1 {
-            font-size: 3.2em;
+            font-size: 3.1em;
         }
     }
-
     @media (min-width: 980px){
         flex-direction: row;
         h1 {
-            font-size: 3.7em;
+            font-size: 3.3em;
         }
         h2 {
             margin-left: 1em;
@@ -49,7 +48,7 @@ const Logo = () => {
             </h1>
             <h2>
                 by HTML5 up
-        </h2>
+            </h2>
         </LogoStyles>
 
     )

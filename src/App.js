@@ -10,6 +10,8 @@ import GlobalStyle from "./styles/GlobalStyles"
 import theme from "./styles/theme";
 
 const Wrapper = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 40px;
   
 `;

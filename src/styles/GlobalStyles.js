@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     body {
       font-size: 1.5rem;
       font-family: 'Open Sans Regular', sans-serif;
-      background-color: ${props => props.theme.lightGrey}
+      background-color: ${props => props.theme.lightGrey};
+      color: ${props => props.theme.black}
     }
 `;
 
