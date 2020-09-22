@@ -5,7 +5,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink
 } from "react-router-dom";
 
 const NavContainer = styled.ul`
@@ -61,8 +62,10 @@ const NavContainer = styled.ul`
             display: flex;
             li{
                 display: inline-block;
+            }
+            .li{
                 padding: 0.5em 1em;
-                margin: 0.5em;                    
+                margin: 0.5em;
                 border-radius: 6px;
                 transition: 0.25s;
                 transition-timing-function: ease-in-out;
@@ -73,19 +76,27 @@ const NavContainer = styled.ul`
 
                 &:hover{
                     background-color: white;
+                    color: ${props => props.theme.grey};
                 }
             }
-                .li__normal{
-                    text-decoration: none;
-                    color: ${props => props.theme.grey}; 
-                }
-                .li__active {
-                    text-decoration: none;
+            .li__normal{
+                text-decoration: none;
+                color: ${props => props.theme.grey};
+                width: 100%;
+                
+
+            }
+            .li__active {
+                text-decoration: none;
+                color: white;
+                background-color: ${props => props.theme.black};
+                border-radius: 6px;
+
+                &:hover{
+                    background-color: ${props => props.theme.black};
                     color: white;
-                    background-color: ${props => props.theme.black}
-                }                   
-
-
+                }
+            }
         }
         .nav__left{
             display: none;
@@ -103,11 +114,19 @@ const Navigation = () => {
                 <span></span>
             </div>
             <div className="nav__main">
-                <li><Link className="li__normal" activeClassName="li__active" to="/">Welcome</Link></li>
-                <li><a>Dropdown</a></li>
-                <li><Link className="li__normal" to="/left-sidebar">Left Sidebar</Link></li>
-                <li><Link className="li__normal" to="/right-sidebar">Right Sidebar</Link></li>
-                <li><Link className="li__normal" to="/no-sidebar">No sidebar</Link></li>
+                <li>
+                    <NavLink
+                        className="li li__normal"
+                        activeClassName="li__active"
+                        exact to="/"
+                    >
+                        Welcome
+                    </NavLink>
+                </li>
+                <li><a className="li">Dropdown</a></li>
+                <li><NavLink className="li li__normal" activeClassName="li__active" exact to="/left-sidebar">Left Sidebar</NavLink></li>
+                <li><NavLink className="li li__normal" activeClassName="li__active" exact to="/right-sidebar">Right Sidebar</NavLink></li>
+                <li><NavLink className="li li__normal" activeClassName="li__active" exact to="/no-sidebar">No sidebar</NavLink></li>
             </div>
 
         </NavContainer>
