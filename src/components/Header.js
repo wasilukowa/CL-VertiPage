@@ -6,8 +6,11 @@ import Logo from './LogoVerti';
 
 const HeaderContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    @media (min-width: 980px){
+        justify-content: space-between;
+    }
 `;
 
 const Header = props => {
