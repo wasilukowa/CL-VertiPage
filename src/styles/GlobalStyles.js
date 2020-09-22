@@ -17,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Open Sans Regular', sans-serif;
       background-color: ${props => props.theme.lightGrey};
       color: ${props => props.theme.black};
-      padding-top: 40px;
     }
 `;
 

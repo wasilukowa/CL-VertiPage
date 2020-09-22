@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from "./components/Header";
+import MainContentContainer from "./components/MainContentContainer"
 
 import { ThemeProvider } from "styled-components";
 import GlobalFonts from "./fonts/fonts";
 import GlobalStyle from "./styles/GlobalStyles"
 
 import theme from "./styles/theme";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const Wrapper = styled.div`
   max-width: 1400px;
@@ -21,9 +23,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <GlobalFonts />
+
       <Wrapper>
-        <Header />
+        <Router>
+          <Header />
+          <MainContentContainer />
+        </Router>
       </Wrapper>
+
     </ThemeProvider>
   );
 }

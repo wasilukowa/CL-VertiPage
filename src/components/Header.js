@@ -8,6 +8,8 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
     @media (min-width: 980px){
         justify-content: space-between;
     }
