@@ -9,13 +9,44 @@ const NavContainer = styled.ul`
     }
 
     .nav__left{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         top: 10px;
         left: 10px;
-        height: 30px;
-        width: 40px;
-        background-color: ${props => props.theme.black}
+        height: 38px;
+        width: 58px;
+        background-color: rgba(0,0,0,0.15);
+        border-radius: 6px;
+        cursor: pointer;
+        span{
+            display: block;
+            width: 20px;
+            height: 4px;
+            background-color: white;
+        }
+        span::before{
+                display: block;
+                background-color: white;
+                content: "";
+                width: 20px;
+                height: 4px;
+                position: absolute;
+                top: 10px;
+                left: 19px;
+            }
+            span::after{
+                display: block;
+                background-color: white;
+                content: "";
+                width: 20px;
+                height: 4px;
+                position: absolute;
+                top: 24px;
+                left: 19px;
+            }
+        }
     }
 
     @media (min-width: 980px){
@@ -52,7 +83,9 @@ const Navigation = () => {
 
     return (
         <NavContainer>
-            <div className="nav__left"></div>
+            <div className="nav__left">
+                <span></span>
+            </div>
             <div className="nav__main">
                 <li className="li__active"><a>Welcome</a></li>
                 <li><a>Dropdown</a></li>

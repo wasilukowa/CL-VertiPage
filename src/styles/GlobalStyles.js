@@ -16,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.5rem;
       font-family: 'Open Sans Regular', sans-serif;
       background-color: ${props => props.theme.lightGrey};
-      color: ${props => props.theme.black}
+      color: ${props => props.theme.black};
+      padding-top: 40px;
     }
 `;
 
