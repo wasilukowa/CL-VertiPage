@@ -5,7 +5,9 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Redirect } from "react-router-dom";
 import ArticleSingle from "./ArticleSingle";
 
-import image1 from "../static/stairs.jpg"
+import image1 from "../static/stairs.jpg";
+import image2 from "../static/butter.jpg";
+import image3 from "../static/something.jpg";
 
 import WhiteContainer from "../styles/WhiteContainer";
 
@@ -74,7 +76,7 @@ const Button = styled.button`
         font-size: 2em;
         i {
             font-size: 1.2em;
-    }
+        }
     }
 
     @media (min-width: 980px){
@@ -84,9 +86,18 @@ const Button = styled.button`
         i {
             padding: 0 0 0 30px;
             font-size: 1.2em;
-    }
+        }
     }
 `;
+
+const ArticlesContainer = styled.div`
+    @media (min-width: 980px) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+`;
+
 
 const style = {
     div: {
@@ -115,7 +126,26 @@ const MainContentWelcomeScreen = () => {
                 </div>
             </WhiteContainer>
             <div>
-                <ArticleSingle image={image1} title="Lorem ipsum" text="Ble ble ble tekst ble" />
+                <ArticlesContainer>
+                    <ArticleSingle
+                        image={image1}
+                        title="Put something here"
+                        subtitle="Maybe here as well I think"
+                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                    />
+                    <ArticleSingle
+                        image={image2}
+                        title="An interesting title"
+                        subtitle="This is also an interesting subtitle"
+                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                    />
+                    <ArticleSingle
+                        image={image3}
+                        title="Oh, and finally ..."
+                        subtitle="Here's another intriguing subtitle"
+                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                    />
+                </ArticlesContainer>
             </div>
         </>
 
