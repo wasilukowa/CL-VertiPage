@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
@@ -10,21 +9,17 @@ import {
 import MainContentLeftSidebar from "./MainContentLeftSidebar";
 import MainContentRightSidebar from "./MainContentRightSidebar";
 import MainContentNoSidebar from "./MainContentNoSidebar";
+import MainContentWelcomeScreen from "./MainContentWelcomeScreen";
 
 
-const MainContentContainerStyling = styled.div`
-    background-color: white;
-    border-radius: 6px;
-    margin-top: 10px;
-    width: 100%;
-    height: 300px;
-`;
 
 const MainContentContainer = () => {
     return (
-        <MainContentContainerStyling>
-            {/* <Router> */}
+        <div>
             <Switch>
+                <Route exact path="/">
+                    <MainContentWelcomeScreen />
+                </Route>
                 <Route exact path="/left-sidebar">
                     <MainContentLeftSidebar />
                 </Route>
@@ -35,9 +30,7 @@ const MainContentContainer = () => {
                     <MainContentNoSidebar />
                 </Route>
             </Switch>
-            {/* </Router> */}
-
-        </MainContentContainerStyling>
+        </div>
 
 
 

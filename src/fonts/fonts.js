@@ -44,6 +44,6 @@ export default createGlobalStyle`
         url(${OpenSansLightWoff2}) format('woff2'),
         url(${OpenSansLightWoff}) format('woff');
         font-weight: 300;
-        font-style: normal;
+        /* font-style: normal; */
     }
 `;
