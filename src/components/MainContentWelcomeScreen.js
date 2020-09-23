@@ -9,8 +9,9 @@ import image2 from '../static/butter.jpg';
 import image3 from '../static/something.jpg';
 
 import WhiteContainer from '../styles/WhiteContainer';
-import Wrapper from '../styles/Wrapper'
-import MainContentWelcomeScreenAbout from '../components/MainContentWelcomeScreenAbout'
+import Wrapper from '../styles/Wrapper';
+import Button from '../styles/ButtonStyles';
+import MainContentWelcomeScreenAbout from '../components/MainContentWelcomeScreenAbout';
 
 const WelcomeScreenTitle = styled.h1`
     h1 {
@@ -52,44 +53,6 @@ const WelcomeScreenTitle = styled.h1`
     }
 `;
 
-const Button = styled.button`
-    background-color: ${props => props.blue ? "#0090C5" : "#F2F2F2"};
-    color: ${props => props.blue ? "white" : props.theme.black};
-    font-family: 'Open Sans Bold';
-    font-size: 1.4em;
-    padding: 0.6em 1.1em;
-    margin: 0.2em;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    border-radius: 6px;
-
-    i {
-        padding: 0 15px 0 0;
-        font-size: 1.2em;
-    }
-
-    @media (min-width: 730px){
-        font-size: 2em;
-        i {
-            font-size: 1.2em;
-        }
-    }
-
-    @media (min-width: 980px){
-        font-size: 2em;
-        flex-direction: row;
-        justify-content: space-between;
-        i {
-            padding: 0 0 0 30px;
-            font-size: 1.2em;
-        }
-    }
-`;
 
 const ArticlesContainer = styled.div`
     @media (min-width: 980px) {
