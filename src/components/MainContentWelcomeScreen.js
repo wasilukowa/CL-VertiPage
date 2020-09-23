@@ -3,31 +3,11 @@ import styled from "styled-components";
 
 import 'font-awesome/css/font-awesome.min.css';
 import { Redirect } from "react-router-dom";
+import ArticleSingle from "./ArticleSingle";
 
-const WelcomeScreenStyling = styled.div`
-    background-color: white;
-    border-radius: 6px;
-    margin-top: 10px;
-    width: 100%;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
-    @media (min-width: 730px) {
-        padding: 40px;
-    };
+import image1 from "../static/stairs.jpg"
 
-    @media (min-width: 980px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 66px;
-        text-align: left;
-    };
-`;
+import WhiteContainer from "../styles/WhiteContainer";
 
 const WelcomeScreenTitle = styled.h1`
     h1 {
@@ -46,6 +26,7 @@ const WelcomeScreenTitle = styled.h1`
         color: ${props => props.theme.grey};
         margin-bottom: 20px;
     }
+
     @media (min-width: 730px){
         h1 {
             font-size: 2em;
@@ -116,22 +97,27 @@ const style = {
 
 const MainContentWelcomeScreen = () => {
     return (
-        <WelcomeScreenStyling>
-            <WelcomeScreenTitle>
-                <h1>Hi.This is Verti.</h1>
-                <span>It's a free responsive site template by HTML5 UP</span>
-            </WelcomeScreenTitle>
-            <div style={style.div}>
-                <Button blue>
-                    <span>Ok let's go</span>
-                    <i className="fa fa-arrow-circle-right"></i>
-                </Button>
-                <Button>
-                    <span>More info</span>
-                    <i className="fa fa-question-circle"></i>
-                </Button>
+        <>
+            <WhiteContainer>
+                <WelcomeScreenTitle>
+                    <h1>Hi.This is Verti.</h1>
+                    <span>It's a free responsive site template by HTML5 UP</span>
+                </WelcomeScreenTitle>
+                <div style={style.div}>
+                    <Button blue>
+                        <span>Ok let's go</span>
+                        <i className="fa fa-arrow-circle-right"></i>
+                    </Button>
+                    <Button>
+                        <span>More info</span>
+                        <i className="fa fa-question-circle"></i>
+                    </Button>
+                </div>
+            </WhiteContainer>
+            <div>
+                <ArticleSingle image={image1} title="Lorem ipsum" text="Ble ble ble tekst ble" />
             </div>
-        </WelcomeScreenStyling>
+        </>
 
     )
 }

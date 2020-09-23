@@ -19,6 +19,13 @@ const Wrapper = styled.div`
   @media (min-width: 730px){
     padding: 50px;
   }
+  @media (min-width: 980px){
+    padding: 5px;
+    width: 960px;
+  }
+  @media (min-width: 1280px){
+    width: 1200px;
+  }
 `;
 
 
