@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Navigation from './Navigation';
 import Logo from './LogoVerti';
+import Wrapper from '../styles/Wrapper';
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -17,10 +18,12 @@ const HeaderContainer = styled.div`
 
 const Header = props => {
     return (
-        <HeaderContainer>
-            <Logo />
-            <Navigation />
-        </ HeaderContainer>
+        <Wrapper>
+            <HeaderContainer>
+                <Logo />
+                <Navigation />
+            </ HeaderContainer>
+        </Wrapper>
     )
 }
 

@@ -1,15 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 import 'font-awesome/css/font-awesome.min.css';
-import { Redirect } from "react-router-dom";
-import ArticleSingle from "./ArticleSingle";
+import ArticleSingle from './ArticleSingle';
 
-import image1 from "../static/stairs.jpg";
-import image2 from "../static/butter.jpg";
-import image3 from "../static/something.jpg";
+import image1 from '../static/stairs.jpg';
+import image2 from '../static/butter.jpg';
+import image3 from '../static/something.jpg';
 
-import WhiteContainer from "../styles/WhiteContainer";
+import WhiteContainer from '../styles/WhiteContainer';
+import Wrapper from '../styles/Wrapper'
+import MainContentWelcomeScreenAbout from '../components/MainContentWelcomeScreenAbout'
 
 const WelcomeScreenTitle = styled.h1`
     h1 {
@@ -109,44 +110,49 @@ const style = {
 const MainContentWelcomeScreen = () => {
     return (
         <>
-            <WhiteContainer>
-                <WelcomeScreenTitle>
-                    <h1>Hi.This is Verti.</h1>
-                    <span>It's a free responsive site template by HTML5 UP</span>
-                </WelcomeScreenTitle>
-                <div style={style.div}>
-                    <Button blue>
-                        <span>Ok let's go</span>
-                        <i className="fa fa-arrow-circle-right"></i>
-                    </Button>
-                    <Button>
-                        <span>More info</span>
-                        <i className="fa fa-question-circle"></i>
-                    </Button>
+            <Wrapper>
+
+                <WhiteContainer>
+                    <WelcomeScreenTitle>
+                        <h1>Hi.This is Verti.</h1>
+                        <span>It's a free responsive site template by HTML5 UP</span>
+                    </WelcomeScreenTitle>
+                    <div style={style.div}>
+                        <Button blue>
+                            <span>Ok let's go</span>
+                            <i className="fa fa-arrow-circle-right"></i>
+                        </Button>
+                        <Button>
+                            <span>More info</span>
+                            <i className="fa fa-question-circle"></i>
+                        </Button>
+                    </div>
+                </WhiteContainer>
+                <div>
+                    <ArticlesContainer>
+                        <ArticleSingle
+                            image={image1}
+                            title="Put something here"
+                            subtitle="Maybe here as well I think"
+                            text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                        />
+                        <ArticleSingle
+                            image={image2}
+                            title="An interesting title"
+                            subtitle="This is also an interesting subtitle"
+                            text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                        />
+                        <ArticleSingle
+                            image={image3}
+                            title="Oh, and finally ..."
+                            subtitle="Here's another intriguing subtitle"
+                            text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
+                        />
+                    </ArticlesContainer>
                 </div>
-            </WhiteContainer>
-            <div>
-                <ArticlesContainer>
-                    <ArticleSingle
-                        image={image1}
-                        title="Put something here"
-                        subtitle="Maybe here as well I think"
-                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
-                    />
-                    <ArticleSingle
-                        image={image2}
-                        title="An interesting title"
-                        subtitle="This is also an interesting subtitle"
-                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
-                    />
-                    <ArticleSingle
-                        image={image3}
-                        title="Oh, and finally ..."
-                        subtitle="Here's another intriguing subtitle"
-                        text="Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla."
-                    />
-                </ArticlesContainer>
-            </div>
+
+            </Wrapper>
+            <MainContentWelcomeScreenAbout />
         </>
 
     )
