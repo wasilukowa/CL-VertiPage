@@ -35,7 +35,7 @@ const WrapperAbout = styled.div`
         font-family: 'Open Sans Bold';
         line-height: 1.4em;
         font-size: 1.2em;
-        margin-bottom: 1em;
+        margin-bottom: 3em;
     }
     p {
         margin-bottom: 1.4em;
@@ -48,9 +48,9 @@ const ImageGalery = styled.div`
     flex-wrap: wrap;
     padding-bottom: 40px;
     .about__image{
-        width: 45%;
+        width: 48%;
         border-radius: 6px;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
 `;
 
