@@ -72,7 +72,7 @@ const Subcontainer = styled.div`
     
 `;
 
-const MainContentLeftSidebar = () => {
+const MainContentRightSidebar = () => {
     return (
         <WhiteContainerFullWidth>
             <Wrapper>
@@ -102,4 +102,4 @@ const MainContentLeftSidebar = () => {
     )
 }
 
-export default MainContentLeftSidebar;
+export default MainContentRightSidebar;
