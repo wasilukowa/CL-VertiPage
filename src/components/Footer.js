@@ -1,5 +1,5 @@
-import React from "react";
-import FooterSection from '../components/FooterSection'
+import React from 'react';
+import FooterSection from '../components/FooterSection';
 
 const links = [
     'Etiam feugiat condimentum',
@@ -12,6 +12,9 @@ const Footer = () => {
     return (
         <>
             <FooterSection title="Random Stuff" linksArray={links} />
+            <FooterSection title="Random Stuff" linksArray={links} />
+            <FooterSection title="Random Stuff" linksArray={links} />
+
         </>
     )
 }
