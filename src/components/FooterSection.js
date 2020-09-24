@@ -1,12 +1,13 @@
 import React from 'react';
-import Wrapper from '../styles/Wrapper';
+
 
 import styled from 'styled-components';
 
 const FooterSectionContainer = styled.div`
-    padding: 1.5em;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid ${props => props.theme.lightGrey};
+    margin-bottom: 20px;
+    flex-basis: 45%;
     h2{
         font-family: 'Open Sans Bold';
         font-size: 1.23em;
@@ -23,25 +24,28 @@ const FooterSectionContainer = styled.div`
             color: ${props => props.theme.grey};
         }
     }
+
+    @media (min-width: 730px){
+        border: none;
+    }
+    @media (min-width: 980px){
+        flex-basis: 24%;
+    }
 `;
 
 
-const FooterSection = ({ title, linksArray }) => {
+const FooterSection = ({ title, linksArray = [] }) => {
     return (
-        <Wrapper>
-            <FooterSectionContainer>
-                <h2>{title}</h2>
-                <ul>
-                    {linksArray.map((link, i) => {
-                        return (
-                            <li key={i}><a href="">{link}</a></li>
-                        )
-                    })}
-                </ul>
-            </FooterSectionContainer>
-
-
-        </Wrapper>
+        <FooterSectionContainer>
+            <h2>{title}</h2>
+            <ul>
+                {linksArray.map((link, i) => {
+                    return (
+                        <li key={i}><a href="">{link}</a></li>
+                    )
+                })}
+            </ul>
+        </FooterSectionContainer>
     )
 }
 
