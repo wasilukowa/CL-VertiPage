@@ -13,17 +13,16 @@ import Wrapper from '../styles/Wrapper';
 import Button from '../styles/ButtonStyles';
 import MainContentWelcomeScreenAbout from '../components/MainContentWelcomeScreenAbout';
 
-const WelcomeScreenTitle = styled.h1`
+const WelcomeScreenTitle = styled.div`
     h1 {
         font-family: 'Open Sans Bold';
-        font-size: 1.1em;
-        line-height: 1.3em;
+        font-size: 3em;
+        line-height: 2em;
         color: ${props => props.theme.black};
-
     }
     span{
         font-family: 'Open Sans Light';
-        font-size: 0.75em;
+        font-size: 2.2em;
         display: block;
         line-height: 1.4em;
         font-weight: 300;
@@ -33,26 +32,25 @@ const WelcomeScreenTitle = styled.h1`
 
     @media (min-width: 730px){
         h1 {
-            font-size: 2em;
+            font-size: 3.4em;
         }
         span {
-            font-size: 1.5em;
+            font-size: 2.2em;
             line-height: 1.4em;
         }
     }
     @media (min-width: 980px){
         flex-basis: 55%;
         h1 {
-            font-size: 1.65em;
+            font-size: 3.4em;
             line-height: 2em;
         }
         span {
-            font-size: 1.2em;
+            font-size: 2.2em;
             line-height: 1.5em;
         }
     }
 `;
-
 
 const ArticlesContainer = styled.div`
     @media (min-width: 980px) {
@@ -62,19 +60,18 @@ const ArticlesContainer = styled.div`
     }
 `;
 
-
 const style = {
     div: {
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
     }
 }
 
 const MainContentWelcomeScreen = () => {
+
     return (
         <>
             <Wrapper>
-
                 <WhiteContainer>
                     <WelcomeScreenTitle>
                         <h1>Hi.This is Verti.</h1>
@@ -113,7 +110,6 @@ const MainContentWelcomeScreen = () => {
                         />
                     </ArticlesContainer>
                 </div>
-
             </Wrapper>
             <MainContentWelcomeScreenAbout />
         </>

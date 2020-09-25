@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import {
     NavLink
-} from "react-router-dom";
+} from 'react-router-dom';
 
 const NavContainer = styled.ul`
     .nav__main{
@@ -53,6 +53,10 @@ const NavContainer = styled.ul`
     }
 
     @media (min-width: 980px){
+        a {
+            color: ${props => props.theme.grey};
+            text-decoration: none;
+        }
         .nav__main{
             display: flex;
             
@@ -70,7 +74,6 @@ const NavContainer = styled.ul`
                 letter-spacing: 0.025em;
                 font-size: 0.9em;
                 cursor: pointer;
-
                 &:hover{
                     background-color: white;
                     color: ${props => props.theme.grey};
@@ -80,31 +83,56 @@ const NavContainer = styled.ul`
                 text-decoration: none;
                 color: ${props => props.theme.grey};
                 width: 100%;
-                
-
             }
             .li__active {
                 text-decoration: none;
                 color: white;
                 background-color: ${props => props.theme.black};
                 border-radius: 6px;
-
                 &:hover{
                     background-color: ${props => props.theme.black};
                     color: white;
                 }
             }
-            #dropdown{
                 .dropdown__menu{
                     display: flex;
                     flex-direction: column;
                     font-family: 'Open Sans Light';
                     font-size: 1.1em;
                     line-height: 2.6em;
-                    a {
-                        color: ${props => props.theme.grey};
-                        text-decoration: none;
+                    position: absolute;
+                    top: 40px;
+                    left: -10px;
+                    padding: 20px;
+                    width: 200px;
+                    background-color: white;
+                    border-radius: 6px;
+                    border: 1px solid ${props => props.theme.lightGrey};
+                    box-shadow:
+                        0 0.5px 1.3px rgba(0, 0, 0, 0.032),
+                        0 1.6px 4.2px rgba(0, 0, 0, 0.048),
+                        0 7px 19px rgba(0, 0, 0, 0.08);
+                    &:before{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background-color: white;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -10px;
+                        left: 50px;
                     }
+                    &.hidden{
+                        display: none;
+                    }
+            }
+                .dropdown__menu-second{
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Open Sans Light';
+                    font-size: 1.1em;
+                    line-height: 2.6em;
                     position: absolute;
                     top: 40px;
                     left: -10px;
@@ -133,7 +161,6 @@ const NavContainer = styled.ul`
                     }
                 }
             }
-        }
         .nav__left{
             display: none;
         }
@@ -141,7 +168,6 @@ const NavContainer = styled.ul`
 `;
 
 const Navigation = () => {
-
     const handleHover = e => {
         e.preventDefault();
         const dropdownMenu = document.getElementById('dropdownM');
@@ -151,6 +177,16 @@ const Navigation = () => {
         e.preventDefault();
         const dropdownMenu = document.getElementById('dropdownM');
         dropdownMenu.classList.add('hidden');
+    }
+    const handleHoverSecond = e => {
+        e.preventDefault();
+        const dropRight = document.getElementById('dropdown2');
+        dropRight.classList.add('hidden');
+    }
+    const handleLeaveSecond = e => {
+        e.preventDefault();
+        const dropRight = document.getElementById('dropdown2');
+        dropRight.classList.remove('hidden');
     }
 
     return (
@@ -168,21 +204,36 @@ const Navigation = () => {
                         Welcome
                     </NavLink>
                 </li>
-                <li>
+                <li
+                    onMouseEnter={e => handleHover(e)}
+                    onMouseLeave={e => handleLeave(e)}
+                >
                     <a href='/'
                         className='li'
                         id='dropdown'
-                        onMouseEnter={e => handleHover(e)}
-                        onMouseLeave={e => handleLeave(e)}
+
                     >
                         Dropdown
-                        <div className='dropdown__menu hidden' id='dropdownM'>
-                            <a href='/'>Lorem ipsum dolor</a>
-                            <a href='/'>Magna phasellus</a>
-                            <a href='/'>Phasellus consequat</a>
-                            <a href='/'>Lamet ornare in</a>
-                        </div>
-                    </a>
+                        </a>
+                    <div className='dropdown__menu hidden' id='dropdownM'>
+                        <a href='/'>Lorem ipsum dolor</a>
+                        <a href='/'>Magna phasellus</a>
+                        <a
+                            href='/'
+                            onMouseEnter={e => handleHoverSecond(e)}
+                            onMouseLeave={e => handleLeaveSecond(e)}
+                            id='dropdown2'
+                        >
+                            Phasellus consequat
+                            </a>
+                        <a href='/'>Lamet ornare in</a>
+                    </div>
+                    <div className='dropdown__menu-second hidden' >
+                        <a href='/'>Lorem ipsum dolor</a>
+                        <a href='/'>Phasellus consequat</a>
+                        <a href='/'>Magna phasellus</a>
+                        <a href='/'>Etiam dolore linst</a>
+                    </div>
                 </li>
                 <li>
                     <NavLink

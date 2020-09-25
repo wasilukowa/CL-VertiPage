@@ -8,7 +8,7 @@ import MainContentWelcomeScreen from './MainContentWelcomeScreen';
 
 const MainContentContainer = () => {
     return (
-        <div>
+        <>
             <Switch>
                 <Route exact path='/'>
                     <MainContentWelcomeScreen />
@@ -23,7 +23,7 @@ const MainContentContainer = () => {
                     <MainContentNoSidebar />
                 </Route>
             </Switch>
-        </div>
+        </>
     )
 }
 
