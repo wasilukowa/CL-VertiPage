@@ -1,19 +1,8 @@
 import React from 'react';
 import WhiteContainerFullWidth from '../styles/WhiteContainerFullWidth';
 import Wrapper from '../styles/Wrapper';
-import Button from '../styles/ButtonStyles';
-import FooterSection from '../components/FooterSection';
 import styled from 'styled-components';
 import 'font-awesome/css/font-awesome.min.css';
-
-const links = [
-    'Amet turpis, feugiat et sit amet',
-    'Ornare in hendrerit in lectus',
-    'Semper mod quis eget mi dolore',
-    'Quam turpis feugiat sit dolor',
-    'Amet ornare in hendrerit in lectus',
-    'Semper mod quisturpis nisi'
-]
 
 const NoSidebarContainer = styled.div`
     padding: 30px;
@@ -33,7 +22,6 @@ const NoSidebarContainer = styled.div`
         }
     }
 `;
-
 
 const Subcontainer = styled.div`
     padding-right: 10px;
@@ -62,9 +50,7 @@ const Subcontainer = styled.div`
         h2 {
             font-size: 2em;
         }
-        
     }
-    
 `;
 
 const MainContentNoSidebar = () => {
@@ -82,7 +68,6 @@ const MainContentNoSidebar = () => {
                 </NoSidebarContainer>
             </Wrapper>
         </WhiteContainerFullWidth>
-
     )
 }
 

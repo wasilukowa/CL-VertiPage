@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Header from './components/Header';
 import MainContentContainer from './components/MainContentContainer';
@@ -17,15 +16,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <GlobalFonts />
-
-
       <Router>
         <Header />
         <MainContentContainer />
         <Footer />
       </Router>
-
-
     </ThemeProvider>
   );
 }

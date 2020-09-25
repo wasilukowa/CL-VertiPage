@@ -11,7 +11,6 @@ const NavContainer = styled.ul`
         font-family: 'Open Sans Bold';
         list-style: none;
     }
-
     .nav__left{
         display: flex;
         justify-content: center;
@@ -29,8 +28,7 @@ const NavContainer = styled.ul`
             width: 20px;
             height: 4px;
             background-color: white;
-        }
-        span::before{
+            &::before{
                 display: block;
                 background-color: white;
                 content: "";
@@ -40,7 +38,7 @@ const NavContainer = styled.ul`
                 top: 10px;
                 left: 19px;
             }
-            span::after{
+            &::after{
                 display: block;
                 background-color: white;
                 content: "";
@@ -50,6 +48,7 @@ const NavContainer = styled.ul`
                 top: 24px;
                 left: 19px;
             }
+        }
         }
     }
 
@@ -141,17 +140,13 @@ const NavContainer = styled.ul`
     }
 `;
 
-
-
 const Navigation = () => {
-
 
     const handleHover = e => {
         e.preventDefault();
         const dropdownMenu = document.getElementById('dropdownM');
         dropdownMenu.classList.remove('hidden');
     }
-
     const handleLeave = e => {
         e.preventDefault();
         const dropdownMenu = document.getElementById('dropdownM');
@@ -160,64 +155,63 @@ const Navigation = () => {
 
     return (
         <NavContainer>
-            <div className="nav__left">
+            <div className='nav__left'>
                 <span></span>
             </div>
-            <div className="nav__main">
+            <div className='nav__main'>
                 <li>
                     <NavLink
-                        className="li li__normal"
-                        activeClassName="li__active"
-                        exact to="/"
+                        className='li li__normal'
+                        activeClassName='li__active'
+                        exact to='/'
                     >
                         Welcome
                     </NavLink>
                 </li>
                 <li>
-                    <a
-                        className="li"
-                        id="dropdown"
+                    <a href='/'
+                        className='li'
+                        id='dropdown'
                         onMouseEnter={e => handleHover(e)}
                         onMouseLeave={e => handleLeave(e)}
                     >
                         Dropdown
-                        <div className="dropdown__menu hidden" id="dropdownM">
-                            <a href="/">Lorem ipsum dolor</a>
-                            <a href="/">Magna phasellus</a>
-                            <a href="/">Phasellus consequat</a>
-                            <a href="/">Lamet ornare in</a>
+                        <div className='dropdown__menu hidden' id='dropdownM'>
+                            <a href='/'>Lorem ipsum dolor</a>
+                            <a href='/'>Magna phasellus</a>
+                            <a href='/'>Phasellus consequat</a>
+                            <a href='/'>Lamet ornare in</a>
                         </div>
                     </a>
                 </li>
                 <li>
                     <NavLink
-                        className="li li__normal"
-                        activeClassName="li__active"
-                        exact to="/left-sidebar"
+                        className='li li__normal'
+                        activeClassName='li__active'
+                        exact to='/left-sidebar'
                     >
                         Left Sidebar
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
-                        className="li li__normal"
-                        activeClassName="li__active"
-                        exact to="/right-sidebar"
+                        className='li li__normal'
+                        activeClassName='li__active'
+                        exact to='/right-sidebar'
                     >
                         Right Sidebar
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
-                        className="li li__normal"
-                        activeClassName="li__active"
-                        exact to="/no-sidebar"
+                        className='li li__normal'
+                        activeClassName='li__active'
+                        exact to='/no-sidebar'
                     >
                         No sidebar
                     </NavLink>
                 </li>
             </div>
-
         </NavContainer>
     );
 }

@@ -49,26 +49,14 @@ const ArticleTextContainer = styled.div`
         padding: 40px;
     };
     @media (min-width: 980px) {
-        /* max-width: 960px; */
-        /* margin: 0 auto; */
-    };
-    @media (min-width: 980px) {
         padding: 20px;
     };
 `;
 
-const style = {
-    imgContainer: {
-        width: "100%",
-        maxHeight: "80%"
-    }
-}
-
 const ArticleSingle = ({ image, title, subtitle, text }) => {
     return (
         <ArticleSingleStyling>
-            <img height="521" width="300" src={image} />
-
+            <img height="521" width="300" src={image} alt='sample_image' />
             <ArticleTextContainer>
                 <h2>{title}</h2>
                 <h3>{subtitle}</h3>

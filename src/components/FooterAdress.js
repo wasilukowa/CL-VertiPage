@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Wrapper from '../styles/Wrapper';
-
 const FooterAdressContainer = styled.div`
     /* min-height: 120px; */
     display: flex;
@@ -31,10 +29,9 @@ const FooterAdressContainer = styled.div`
             &:nth-child(2){
                 border-left: 1px solid #B0B7BC;
                 border-right: 1px solid #B0B7BC;
-        }
+            }
         }
     }
-    
 `;
 
 const FooterAdress = () => {
@@ -44,7 +41,6 @@ const FooterAdress = () => {
             <span>Design: HTML5 UP</span>
             <span>Demo Images: Unsplash</span>
         </FooterAdressContainer>
-
     )
 };
 

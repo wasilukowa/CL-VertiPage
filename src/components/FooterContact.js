@@ -1,6 +1,4 @@
 import React from 'react';
-import Wrapper from '../styles/Wrapper';
-
 import styled from 'styled-components';
 
 const FooterSectionContainer = styled.div`
@@ -14,7 +12,6 @@ const FooterSectionContainer = styled.div`
         color: ${props => props.theme.black};
         margin-bottom: 1em;
     }
-
     @media (min-width: 730px){
         border: none;
     }
@@ -22,7 +19,6 @@ const FooterSectionContainer = styled.div`
         flex-basis: 24%;
     }
 `;
-
 
 const FooterSection = ({ title, linksArray = [] }) => {
     return (

@@ -9,7 +9,7 @@ const FooterSection = ({ title, linksArray = [] }) => {
             <ul>
                 {linksArray.map((link, i) => {
                     return (
-                        <li key={i}><a href="">{link}</a></li>
+                        <li key={i}><a href='/'>{link}</a></li>
                     )
                 })}
             </ul>
