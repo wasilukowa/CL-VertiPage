@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from './components/Header';
 import MainContentContainer from './components/MainContentContainer';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalFonts from './fonts/fonts';
