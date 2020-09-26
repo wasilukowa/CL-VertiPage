@@ -148,28 +148,39 @@ const NavContainer = styled.ul`
 `;
 
 const HiddenNavLeft = styled.div`
+    ul {
+        list-style: none;
+        cursor: pointer;
+    }
     .sidenav {
         height: 100vh;
         width: 0;
         position: fixed;
         z-index: 999;
         top: 0;
-        left: 0;
-        background-color: #111;
+        left: -40px;
+        background-color: white;
         overflow-x: hidden;
-        padding-top: 60px;
+        padding: 40px 20px;
         transition: 0.5s;
+        .li__left-menu{
+            font-family: 'Open Sans Bold';
+            font-weight: 300;
+            color: ${props => props.theme.grey};
+            font-size: 1.2em;
+            border-bottom: 1px solid ${props => props.theme.lightGrey};
+        }
+        a {
+            font-family: 'Open Sans Light';
+            font-size: 1em;
+            font-weight: 300px;
+            border-bottom: 1px solid ${props => props.theme.lightGrey};
+            padding: 10px 20px 10px 40px;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
     }
-  
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-  
     .sidenav a:hover {
         color: #f1f1f1;
     }
@@ -180,11 +191,6 @@ const HiddenNavLeft = styled.div`
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
-    }
-    
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
     }
 `;
 
@@ -197,7 +203,7 @@ const Navigation = () => {
     }
 
     const openNav = () => {
-        document.getElementById('mySidenav').style.width = "250px";
+        document.getElementById('mySidenav').style.width = "290px";
     }
 
     const closeNav = () => {
@@ -206,16 +212,41 @@ const Navigation = () => {
 
     return (
         <>
-            <HiddenNavLeft>
-                <div className='sidenav' id='mySidenav'>
-                    <a href="#" className='closebtn' onClick={closeNav}>&times;</a>
-                    <a href="#" onClick={closeNav}>About</a>
-                    <a href="#" onClick={closeNav}>Services</a>
-                    <a href="#" onClick={closeNav}>Clients</a>
-                    <a href="#" onClick={closeNav}>Contact</a>
-                </div>
-            </HiddenNavLeft>
             <NavContainer>
+                <HiddenNavLeft>
+                    <ul className='sidenav' id='mySidenav'>
+                        <li className='closebtn' onClick={closeNav}>&times;</li>
+                        <NavLink
+                            className='li__left-menu'
+                            exact to='/'
+                        >Welcome
+                        </NavLink>
+                        <NavLink
+                            className='li__left-menu'
+                            exact to='/'
+                        >Dropdown
+                        </NavLink>
+                        <a href='/'>Lorem ipsum dolor</a>
+                        <a href='/'>Magna phasellus</a>
+                        <a href='/'>Phasellus consequat</a>
+                        <a href='/'>Lamet ornare in</a>
+                        <NavLink
+                            className='li__left-menu'
+                            exact to='/left-sidebar'
+                        >Left Side Menu
+                        </NavLink>
+                        <NavLink
+                            className='li__left-menu'
+                            exact to='/right-sidebar'
+                        >Right Side Menu
+                        </NavLink>
+                        <NavLink
+                            className='li__left-menu'
+                            exact to='/no-sidebar'
+                        >No Sidebar
+                        </NavLink>
+                    </ul>
+                </HiddenNavLeft>
                 <div
                     className='nav__left'
                     onClick={e => handleClick(e)}
