@@ -96,75 +96,61 @@ const NavContainer = styled.ul`
             display: none;
         }
     }
+    /* Menu dropdown element */
+    #dropdown-menu-el {
+        .dropdown__menu{
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 180px;
+            background-color: white;
+            border-radius: 6px;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border: 1px solid ${props => props.theme.lightGrey};
+            z-index: 20000;
+            transition: 0.2s;
+            box-shadow:
+                0 0.5px 1.3px rgba(0, 0, 0, 0.032),
+                0 1.6px 4.2px rgba(0, 0, 0, 0.048),
+                0 7px 19px rgba(0, 0, 0, 0.08);
+            a {
+                font-family: 'Open Sans Light';
+                font-size: 0.9em;
+                text-decoration: none;
+                color: ${props => props.theme.grey};
+                line-height: 2.6em;
+                padding: 5px 10px;
+                transition: 0.25s;
+                display: block;
+                &:hover {
+                    background-color: ${props => props.theme.lightGrey};
+                }
+            }
+            &:before{
+                content: '';
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: white;
+                transform: rotate(45deg);
+                position: absolute;
+                top: -5px;
+                left: 40px;
+            }
+        }
+    &:hover {
+        .dropdown__menu{
+            display: block;
+        }
+    } 
+    }
+
 `;
 
-const DropdownElement = styled.div`
-    .dropdown__menu{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        width: 200px;
-        background-color: white;
-        border-radius: 6px;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border: 1px solid ${props => props.theme.lightGrey};
-        box-shadow:
-            0 0.5px 1.3px rgba(0, 0, 0, 0.032),
-            0 1.6px 4.2px rgba(0, 0, 0, 0.048),
-            0 7px 19px rgba(0, 0, 0, 0.08);
-        a {
-            font-family: 'Open Sans Light';
-            font-size: 0.9em;
-            text-decoration: none;
-            color: ${props => props.theme.grey};
-            line-height: 2.6em;
-            padding: 5px 10px;
-            &:hover {
-                background-color: ${props => props.theme.lightGrey};
-            }
-        }
-            &:before{
-                        content: '';
-                        display: block;
-                        width: 15px;
-                        height: 15px;
-                        background-color: white;
-                        transform: rotate(45deg);
-                        position: absolute;
-                        top: -5px;
-                        left: 40px;
-            }
-            &.hidden{
-                display: none;
-            }
-        }
-`;
 
 const Navigation = () => {
-    const handleHover = e => {
-        e.preventDefault();
-        const dropdownMenu = document.getElementById('dropdownM');
-        dropdownMenu.classList.remove('hidden');
-    }
-    const handleLeave = e => {
-        e.preventDefault();
-        const dropdownMenu = document.getElementById('dropdownM');
-        dropdownMenu.classList.add('hidden');
-    }
-    // const handleHoverSecond = e => {
-    //     e.preventDefault();
-    //     const dropRight = document.getElementById('dropdown2');
-    //     dropRight.classList.add('hidden');
-    // }
-    // const handleLeaveSecond = e => {
-    //     e.preventDefault();
-    //     const dropRight = document.getElementById('dropdown2');
-    //     // dropRight.classList.remove('hidden');
-    // }
-
     return (
         <NavContainer>
             <div className='nav__left'>
@@ -182,29 +168,16 @@ const Navigation = () => {
                 </li>
                 <div id='dropdown-menu-el'>
                     <li
-                        onMouseEnter={e => handleHover(e)}
-                        onMouseLeave={e => handleLeave(e)}
                         className='li'
                     >
                         Dropdown
                     </li>
-
-                    <DropdownElement>
-                        <div className='dropdown__menu hidden' id='dropdownM'>
-                            <a href='/'>Lorem ipsum dolor</a>
-                            <a href='/'>Magna phasellus</a>
-                            <a href='/'>
-                                Phasellus consequat
-                                </a>
-                            <a href='/'>Lamet ornare in</a>
-                        </div>
-                        {/* <div className='dropdown__menu-second hidden' >
-                            <a href='/'>Lorem ipsum dolor</a>
-                            <a href='/'>Phasellus consequat</a>
-                            <a href='/'>Magna phasellus</a>
-                            <a href='/'>Etiam dolore linst</a>
-                        </div> */}
-                    </DropdownElement>
+                    <div className='dropdown__menu'>
+                        <a href='/'>Lorem ipsum dolor</a>
+                        <a href='/'>Magna phasellus</a>
+                        <a href='/'>Phasellus consequat</a>
+                        <a href='/'>Lamet ornare in</a>
+                    </div>
                 </div>
                 <li>
                     <NavLink
