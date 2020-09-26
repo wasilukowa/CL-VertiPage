@@ -1,3 +1,17 @@
+Welcome to Verti template. 
+
+Project was build bases on Verti by HTML5 template, which demo can be foud here:
+https://html5up.net/uploads/demos/verti/index.html
+
+My aim was to recreate this template using React and Styled Components. 
+Deployment of my app can be found here:
+
+https://wasilukowa.github.io/verti/
+
+Enjoy :)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
