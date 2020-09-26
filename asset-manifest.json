@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/CL-VertiPage/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/CL-VertiPage/static/js/main.30b9fb07.chunk.js",
+    "main.js.map": "/CL-VertiPage/static/js/main.30b9fb07.chunk.js.map",
+    "runtime-main.js": "/CL-VertiPage/static/js/runtime-main.00785757.js",
+    "runtime-main.js.map": "/CL-VertiPage/static/js/runtime-main.00785757.js.map",
+    "static/css/2.459080cb.chunk.css": "/CL-VertiPage/static/css/2.459080cb.chunk.css",
+    "static/js/2.505a9e54.chunk.js": "/CL-VertiPage/static/js/2.505a9e54.chunk.js",
+    "static/js/2.505a9e54.chunk.js.map": "/CL-VertiPage/static/js/2.505a9e54.chunk.js.map",
+    "index.html": "/CL-VertiPage/index.html",
+    "precache-manifest.cc04e0f2aa740f8b9b024611007f1ac5.js": "/CL-VertiPage/precache-manifest.cc04e0f2aa740f8b9b024611007f1ac5.js",
+    "service-worker.js": "/CL-VertiPage/service-worker.js",
+    "static/css/2.459080cb.chunk.css.map": "/CL-VertiPage/static/css/2.459080cb.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/CL-VertiPage/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.505a9e54.chunk.js.LICENSE.txt": "/CL-VertiPage/static/js/2.505a9e54.chunk.js.LICENSE.txt",
+    "static/media/butter.jpg": "/CL-VertiPage/static/media/butter.c7909e96.jpg",
+    "static/media/font-awesome.min.css": "/CL-VertiPage/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/hamza.jpg": "/CL-VertiPage/static/media/hamza.7d524bdd.jpg",
+    "static/media/oleo-script-v9-latin-regular.woff": "/CL-VertiPage/static/media/oleo-script-v9-latin-regular.20ac75a2.woff",
+    "static/media/oleo-script-v9-latin-regular.woff2": "/CL-VertiPage/static/media/oleo-script-v9-latin-regular.705b1919.woff2",
+    "static/media/open-sans-v18-latin-300.woff2": "/CL-VertiPage/static/media/open-sans-v18-latin-300.24f7b094.woff2",
+    "static/media/open-sans-v18-latin-300.woff": "/CL-VertiPage/static/media/open-sans-v18-latin-300.a7622f60.woff",
+    "static/media/open-sans-v18-latin-800.woff": "/CL-VertiPage/static/media/open-sans-v18-latin-800.05ebdbe1.woff",
+    "static/media/open-sans-v18-latin-800.woff2": "/CL-VertiPage/static/media/open-sans-v18-latin-800.ab3e500e.woff2",
+    "static/media/open-sans-v18-latin-regular.woff2": "/CL-VertiPage/static/media/open-sans-v18-latin-regular.33543c5c.woff2",
+    "static/media/open-sans-v18-latin-regular.woff": "/CL-VertiPage/static/media/open-sans-v18-latin-regular.de0869e3.woff",
+    "static/media/priscilla.jpg": "/CL-VertiPage/static/media/priscilla.1fe43f57.jpg",
+    "static/media/quinton.jpg": "/CL-VertiPage/static/media/quinton.db191e84.jpg",
+    "static/media/simon.jpg": "/CL-VertiPage/static/media/simon.7ff92de7.jpg",
+    "static/media/something.jpg": "/CL-VertiPage/static/media/something.8afb1768.jpg",
+    "static/media/stairs.jpg": "/CL-VertiPage/static/media/stairs.7ee30d30.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00785757.js",
+    "static/css/2.459080cb.chunk.css",
+    "static/js/2.505a9e54.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.30b9fb07.chunk.js"
+  ]
+}
