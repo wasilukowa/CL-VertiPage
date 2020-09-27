@@ -1,4 +1,4 @@
-#Welcome to Verti template. 
+# Welcome to Verti template. 
 
 Project was build bases on Verti by HTML5 template, which demo can be found here:
 https://html5up.net/uploads/demos/verti/index.html
@@ -15,9 +15,9 @@ Technologies used in the project:
 
   
 
-**Deployment of my app can be found here:
+**Deployment of my app can be found here:**
 
-https://wasilukowa.github.io/verti/**
+**https://wasilukowa.github.io/verti/**
 
 
 
