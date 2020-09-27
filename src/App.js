@@ -16,7 +16,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <GlobalFonts />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <MainContentContainer />
         <Footer />

@@ -219,6 +219,7 @@ const Navigation = () => {
                         <NavLink
                             className='li__left-menu'
                             exact to='/'
+                            onClick={closeNav}
                         >Welcome
                         </NavLink>
                         <NavLink
@@ -226,23 +227,26 @@ const Navigation = () => {
                             exact to='/'
                         >Dropdown
                         </NavLink>
-                        <a href='/'>Lorem ipsum dolor</a>
-                        <a href='/'>Magna phasellus</a>
-                        <a href='/'>Phasellus consequat</a>
-                        <a href='/'>Lamet ornare in</a>
+                        <a href='/' onClick={closeNav}>Lorem ipsum dolor</a>
+                        <a href='/' onClick={closeNav}>Magna phasellus</a>
+                        <a href='/' onClick={closeNav}>Phasellus consequat</a>
+                        <a href='/' onClick={closeNav}>Lamet ornare in</a>
                         <NavLink
                             className='li__left-menu'
                             exact to='/left-sidebar'
+                            onClick={closeNav}
                         >Left Side Menu
                         </NavLink>
                         <NavLink
                             className='li__left-menu'
                             exact to='/right-sidebar'
+                            onClick={closeNav}
                         >Right Side Menu
                         </NavLink>
                         <NavLink
                             className='li__left-menu'
                             exact to='/no-sidebar'
+                            onClick={closeNav}
                         >No Sidebar
                         </NavLink>
                     </ul>
