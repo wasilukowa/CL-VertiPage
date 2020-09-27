@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d20d4008f852fe9e5f11f18ed6175a32",
+    "revision": "d72936a2f7bf828313286bee1e9929aa",
     "url": "/verti/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/verti/static/css/2.fbe66781.chunk.css"
   },
   {
-    "revision": "655c2f5f3b6c04c60d0e",
+    "revision": "263a161f2ec705c541c1",
     "url": "/verti/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/verti/static/js/2.e7d151b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "655c2f5f3b6c04c60d0e",
-    "url": "/verti/static/js/main.7b5b9266.chunk.js"
+    "revision": "263a161f2ec705c541c1",
+    "url": "/verti/static/js/main.52646fa7.chunk.js"
   },
   {
     "revision": "5f711a2bb95e7ef7db3c",
