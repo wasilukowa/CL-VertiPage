@@ -1,8 +1,10 @@
 # Welcome to Verti template. 
 
+**Deployment of my app can be found here:**
+**https://wasilukowa.github.io/Verti-website-template**
+
 Project was build bases on Verti by HTML5 template, which demo can be found here:
 https://html5up.net/uploads/demos/verti/index.html
-
 
 
 Technologies used in the project:
@@ -12,12 +14,6 @@ Technologies used in the project:
 - React Router
 
 - Styled Components
-
-  
-
-**Deployment of my app can be found here:**
-
-**https://wasilukowa.github.io/Verti-website-template**
 
 
 
