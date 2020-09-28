@@ -17,7 +17,7 @@ Technologies used in the project:
 
 **Deployment of my app can be found here:**
 
-**https://wasilukowa.github.io/verti/**
+**https://wasilukowa.github.io/Verti-website-template**
 
 
 
