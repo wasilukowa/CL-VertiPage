@@ -4,11 +4,12 @@ import Header from './components/Header';
 import MainContentContainer from './components/MainContentContainer';
 import Footer from './components/Footer';
 
+import theme from './styles/theme';
 import { ThemeProvider } from 'styled-components';
+
 import GlobalFonts from './fonts/fonts';
 import GlobalStyle from './styles/GlobalStyles';
 
-import theme from './styles/theme';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
