@@ -11,7 +11,6 @@
     "font-awesome": "^4.7.0",
     "gh-pages": "^3.1.0",
     "http-proxy": "^1.18.1",
-    "immer": "^1.10.0",
     "node-forge": "^0.10.0",
     "object-path": "^0.11.5",
     "react": "^16.13.1",
@@ -43,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "immer": "^8.0.1"
   }
 }
